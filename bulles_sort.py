@@ -1,20 +1,36 @@
-# Algo pour l'implémentation du Tri à bulle
- 
-def tri_bulle(tab):
+import sys
+print(sys.argv[1])
+argv = sys.argv[1]
+array_argv = argv.split(';')
+print(array_argv)
+
+import timeit
+nb_iti = 0
+
+def bulle_sort(tab):
     n = len(tab)
-    # Traverser tous les éléments du tableau
     for i in range(n):
         for j in range(0, n-i-1):
-            # échanger si l'élément trouvé est plus grand que le suivant
             if tab[j] > tab[j+1] :
                 tab[j], tab[j+1] = tab[j+1], tab[j]
 
 
-# Programme principale pour tester le code ci-dessus
-tab = [98, 22, 15, 32, 2, 74, 63, 70]
+tab = array_argv
+original_tab = tab
+sorted_tab = []
+
+bulle_sort(tab)
  
-tri_bulle(tab)
- 
-print ("Le tableau trié est:")
+print("Test")
 for i in range(len(tab)):
-    print ("%d" %tab[i])
+    sorted_tab.append(tab[i])
+
+print("Serie")
+print(argv.split(';'))
+print("Resultat")
+print(sorted_tab)
+print("Nb de comparaison")
+print(nb_iti)
+print("Temps (sec)")
+execution_time = timeit.timeit(bulle_sort, number=100)
+print(execution_time)
