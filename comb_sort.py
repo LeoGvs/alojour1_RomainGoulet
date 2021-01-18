@@ -33,4 +33,4 @@ combSort(liste)
 
 print ("Liste triée:") 
 for i in range(len(liste)): 
-	print (liste[i]),
+	print (liste[i])
