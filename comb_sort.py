@@ -1,28 +1,36 @@
-def getNextGap(gap): 
-    gap = (gap * 10)//13
-    if gap < 1: 
+import sys
+
+def convertStringToNumber(array):
+    liste = []
+    for i in range(len(array)):
+        liste.append(float(array[i]))
+    return liste
+
+def nextInterval(interval): 
+    interval = (interval * 10)//13 #13 est le facteur de réduction optimal x10
+    if interval < 1: 
         return 1
-    return gap 
+    return interval 
  
-def combSort(arr): 
-    n = len(arr) 
-    gap = n 
-    swapped = True
+def combSort(liste): 
+    n = len(liste) 
+    interval = n 
+    echange = True
 
-    while gap !=1 or swapped == 1: 
-        gap = getNextGap(gap) 
+    while interval !=1 or echange == 1: 
+        interval = nextInterval(interval) 
+        echange = False
+        
+        for i in range(0, n-interval): 
+            if liste[i] > liste[i + interval]: 
+                liste[i], liste[i + interval]=liste[i + interval], liste[i] 
+                echange = True
 
-        swapped = False
-
-        for i in range(0, n-gap): 
-            if arr[i] > arr[i + gap]: 
-                arr[i], arr[i + gap]=arr[i + gap], arr[i] 
-                swapped = True
+liste = convertStringToNumber(sys.argv[1].split(";"))
+combSort(liste) 
 
 
-arr = [ 8, 4, 1, 3, -44, 23, -6, 28, 0] 
-combSort(arr) 
+print ("Liste triée:") 
+for i in range(len(liste)): 
+	print (liste[i])
 
-print ("Sorted array:") 
-for i in range(len(arr)): 
-    print (arr[i]),
