@@ -9,7 +9,7 @@ def combSort(liste):
     interval = n 
     echange = True
 
-    while interval !=1 or échange == 1: 
+    while interval !=1 or echange == 1: 
         interval = nextInterval(interval) 
         echange = False
         
