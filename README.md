@@ -1,5 +1,5 @@
 # Rendu algo jour 1
-# Groupe Léo Gourvès, Romain Goulet, Nathan Rotsztein
+# Groupe Léo Gourvès, Romain Goulet, Nathan Rotsztein / Discord : TD 5
 
 Bonjour, nous avons ici expliqué le fonctionnement des différents algorithmes avec nos mots, suite à cela nous avons rédigé notre constat sur le tri le plus intéressant.
 
@@ -60,6 +60,8 @@ Ici l'algorythme devise en deux moitiés les valeurs du tableau. Chacunes des pa
 # Le tri rapide : 
 
 Cet algorithme va partionné le tableau en plusieurs parties qui vont chacunes être partionné en deux sous listes (celle de gauche et celle de droite). Notons que la césure n'est pas forcément au milieu de la partie. Nous aurons donc un désiquilibre entre les tailles des sous partie.
+
+Sous partie vont être par la suite trié
 
 
 
