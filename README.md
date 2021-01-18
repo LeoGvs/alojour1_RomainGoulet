@@ -82,4 +82,4 @@ Complexité en espace Pire cas : O(1)
 
 # Conclusion :
 
-Suite à nos résultats nous avons pu en conclure que le tri le plus intéressant est le tri fusion, en effet c'est celui qui arrive à trier l'ensemble du tableau avec le moins de comparaisons effectuées, c'est également un de ceux qui ont mis le moins de temps.
+Suite à nos résultats nous avons pu en conclure que le tri le plus intéressant est le tri fusion, en effet c'est celui qui arrive à trier l'ensemble du tableau avec le moins de comparaisons effectuées, c'est également un de ceux qui a mis le moins de temps.
