@@ -7,16 +7,16 @@ def nextInterval(interval):
 def combSort(liste): 
     n = len(liste) 
     interval = n 
-    échange = True
+    echange = True
 
     while interval !=1 or échange == 1: 
         interval = nextInterval(interval) 
-        échange = False
+        echange = False
         
         for i in range(0, n-interval): 
             if liste[i] > liste[i + interval]: 
                 liste[i], liste[i + interval]=liste[i + interval], liste[i] 
-                échange = True
+                echange = True
 
 
 liste = [ 5, 500, 5, 1, 44.5, -23.5, -84.5, +28.0, 0] 
