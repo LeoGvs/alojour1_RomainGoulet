@@ -1,3 +1,12 @@
+  
+import sys
+
+def convertStringToNumber(array):
+    liste = []
+    for i in range(len(array)):
+        liste.append(float(array[i]))
+    return liste
+
 def nextInterval(interval): 
     interval = (interval * 10)//13 #13 est le facteur de réduction optimal x10
     if interval < 1: 
@@ -18,10 +27,10 @@ def combSort(liste):
                 liste[i], liste[i + interval]=liste[i + interval], liste[i] 
                 echange = True
 
-
-liste = [ 5, 500, 5, 1, 44.5, -23.5, -84.5, +28.0, 0] 
+liste = convertStringToNumber(sys.argv[1].split(";"))
 combSort(liste) 
+
 
 print ("Liste triée:") 
 for i in range(len(liste)): 
-print (liste[i]), 
+	print (liste[i]),
