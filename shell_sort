@@ -1,0 +1,30 @@
+import sys
+
+def convertStringToNumber(array):
+    liste = []
+    for i in range(len(array)):
+        liste.append(float(array[i]))
+    return liste
+
+def shellSort(liste): 
+    n = len(liste) 
+    interval = n
+
+    while interval > 0: 
+  
+        for i in range(interval,n): 
+            number = liste[i] 
+            j = i 
+            while  j >= interval and liste[j-interval] >number: 
+                liste[j] = liste[j-interval] 
+                j = j-interval 
+
+            liste[j] = number 
+        interval = interval//2
+  
+liste = convertStringToNumber(sys.argv[1].split(";"))
+shellSort(liste) 
+
+print ("Liste triée:") 
+for i in range(len(liste)): 
+   print (liste[i]),
